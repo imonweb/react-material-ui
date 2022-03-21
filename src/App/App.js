@@ -1,7 +1,7 @@
 import './App.css';
 import SideMenu from '../components/SideMenu';
 import { makeStyles } from '@material-ui/styles';
-import Header from './Header';
+import Header from '../components/Header';
 import { CssBaseline } from '@mui/material';
 
 const useStyles = makeStyles({
