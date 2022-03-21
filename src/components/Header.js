@@ -6,10 +6,25 @@ import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
 import { styled } from '@mui/material/styles';
 // import AppBar from '@mui/material/AppBar';
 
+
+// customize 
+// import { createTheme } from '@mui/material';
+// import { createTheme } from '@mui/material/styles';
+import { makeStyles, ThemeProvider } from "@material-ui/styles";
+  
+ 
+ 
+const useStyles = makeStyles({
+  root: {
+    backgroundColor: "#fff"
+  } 
+});
   
 export default function () {
+   const classes = useStyles();
   return (
-    <AppBar position="static">
+    //  <ThemeProvider theme={customTheme}>
+    <AppBar position="static" className={classes.root}>
      <Toolbar>
       <Grid container>
         {/* <Grid item xs={4} style={{border:'1px solid #fff'}}> */}
@@ -41,5 +56,6 @@ export default function () {
       
      </Toolbar>
     </AppBar>
+    // </ThemeProvider>
   )
 }
